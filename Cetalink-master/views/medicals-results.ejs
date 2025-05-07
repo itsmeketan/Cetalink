@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Medical Shops</title>
+    <link rel="stylesheet" href="/medical-result.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/logo1-removebg-preview.png" alt="Cetalink Logo" class="logo-img">
+                <h1>Cetalink</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="medical-shops">
+            <h2>Nearby Medical Shops</h2>
+
+            <% if (medicals.length> 0) { %>
+                <ul class="medical-list">
+                    <% medicals.forEach((medical)=> { %>
+                        <li class="medical-item">
+                            <strong class="medical-name">
+                                <%= medical.name %>
+                            </strong><br>
+                            <p class="medical-address">Address: <%= medical.address %>
+                            </p>
+                            <p class="medical-distance">Distance: <%= medical.distance ? `${medical.distance.toFixed(2)}
+                                    km` : 'N/A' %>
+                            </p>
+                            <p class="medical-place-id">Place ID: <%= medical.place_id %>
+                            </p>
+                            <!-- View Button for Pharmacy -->
+                            <a href="/medicals/details/<%= medical.place_id %>">
+                                <button class="details-btn">View Details</button>
+                            </a>
+                            <hr>
+                        </li>
+                        <% }); %>
+                </ul>
+                <% } else { %>
+                    <p class="no-medicals">No medical shops found for the given location or city. Please try again.</p>
+                    <% } %>
+
+                        <div class="back-link">
+                            <a href="/medicals">Search Again</a>
+                        </div>
+        </section>
+    </div>
+</body>
+
+</html>

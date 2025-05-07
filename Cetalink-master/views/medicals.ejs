@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nearby Medicals</title>
+    <link rel="stylesheet" href="/medicals.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo1-removebg-preview.png" alt="Cetalink Logo" class="logo-img">
+                <h1>Cetalink</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Find Nearby Medicals:</h2>
+        <form action="/medicals" method="POST" id="location-form">
+            <label for="city">Enter your city:</label>
+            <input type="text" id="city" name="city" required>
+
+            <input type="hidden" id="latitude" name="latitude">
+            <input type="hidden" id="longitude" name="longitude">
+
+            <button type="submit">Find Medicals</button>
+        </form>
+
+        <br><br><br>
+
+        <button onclick="getLocation()">Use My Current Location</button>
+    </div>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation not supported.");
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById('latitude').value = position.coords.latitude;
+            document.getElementById('longitude').value = position.coords.longitude;
+            document.getElementById('location-form').submit();
+        }
+
+        function showError(error) {
+            alert("Error fetching location: " + error.message);
+        }
+    </script>
+</body>
+
+</html>

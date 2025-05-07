@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1f7f7;
+    color: #333;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #2D90A5;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    text-align:right;
+}
+
+.header-container {
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items:start;
+}
+
+.logo img {
+    width: 50px;
+    /* Adjust logo size */
+    margin-right: px;
+    /* Space between logo and text */
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+    color: white;
+}
+
+/* Container Styles */
+.container {
+    margin-top: 80px;
+    /* Space for fixed header */
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hospital Details */
+.hospital-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.hospital-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.hospital-photo {
+    margin-top: 20px;
+}
+
+.hospital-photo img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Back Link */
+.back-link a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2D90A5;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #2D90A5;
+    border-radius: 5px;
+}
+
+.back-link a:hover {
+    background-color: #2D90A5;
+    color: white;
+    border-color: #1a6073;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.6rem;
+        padding: 10px;
+    }
+
+    .hospital-info p {
+        font-size: 0.9rem;
+    }
+
+    .back-link a {
+        font-size: 1rem;
+    }
+}

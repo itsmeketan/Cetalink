@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= hospital.name %> - Hospital Details
+    </title>
+    <link rel="stylesheet" href="/hospital-details.css">
+</head>
+
+<body>
+    <!-- Header Section with Logo and Cetalink Name -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <!-- Assuming you have an image for the logo -->
+                <img src="/logo1-removebg-preview.png" alt="Cetalink Logo" class="logo-img">
+                <h1>Cetalink</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hospital Details Section -->
+        <section class="hospital-details">
+            <h2>
+                <%= hospital.name %>
+            </h2>
+            <% if (hospital.name) { %>
+                <div class="hospital-info">
+                    <p><strong>Address:</strong>
+                        <%= hospital.formatted_address %>
+                    </p>
+                    <p><strong>Phone:</strong>
+                        <%= hospital.formatted_phone_number || 'Not available' %>
+                    </p>
+                    <p><strong>Rating:</strong>
+                        <%= hospital.rating || 'Not available' %>
+                    </p>
+                    <p><strong>Website:</strong> <a href="<%= hospital.website || '#' %>" target="_blank">
+                            <%= hospital.website || 'Not available' %>
+                        </a></p>
+                </div>
+
+                <% if (hospital.photos && hospital.photos.length> 0) { %>
+                    <div class="hospital-photo">
+                        <p><strong>Photo:</strong></p>
+                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=<%= hospital.photos[0].photo_reference %>&key=<%= googleMapsApiKey %>"
+                            alt="Hospital Photo">
+                    </div>
+                    <% } else { %>
+                        <p><strong>Photo:</strong> No photo available.</p>
+                        <% } %>
+                            <% } else { %>
+                                <p>Sorry, no details available for this hospital.</p>
+                                <% } %>
+        </section>
+
+        <!-- Back Link -->
+        <div class="back-link">
+            <a href="/medicals">Go to Medicals</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

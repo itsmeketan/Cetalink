@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #2D90A5;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 10000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    margin-top: 80px;
+    /* Adjust for fixed header */
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Medical Shops List */
+.medical-shops h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.medical-list {
+    list-style: none;
+    padding: 0;
+}
+
+.medical-item {
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.medical-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.medical-address,
+.medical-distance,
+.medical-place-id {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.details-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #2D90A5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details-btn:hover {
+    background-color: #247d8c;
+}
+
+.no-medicals {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.back-link a {
+    color: #2D90A5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}

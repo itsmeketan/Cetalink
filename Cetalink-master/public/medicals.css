@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1f7f7;
+    /* Light blue background for a healthcare theme */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #2D90A5;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 120000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Container Styling */
+.container {
+    margin-top: 100px;
+    /* Adjust for fixed header */
+    width: 300%;
+    max-width: 800px;
+    padding: 2px;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    /* White form background */
+    padding: 90px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #2D90A5;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #247d8c;
+}
+
+/* Location Button */
+button {
+    background-color: #2D90A5;
+    color: white;
+    padding: 10px 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #247d8c;
+}
+
+/* Spacing and Layout */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2D90A5;
+}
+
+br {
+    margin-top: 10px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Medical Shop Details</title>
+    <link rel="stylesheet" href="/medical-shop-details.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/logo1-removebg-preview.png" alt="Cetalink Logo">
+                <h1>Cetalink</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>
+            <%= details.name %>
+        </h1>
+        <p><strong>Address:</strong>
+            <%= details.address %>
+        </p>
+        <p><strong>Phone Number:</strong>
+            <%= details.phone_number %>
+        </p>
+        <p><strong>Website:</strong> <a href="<%= details.website %>" target="_blank">
+                <%= details.website %>
+            </a></p>
+        <p><strong>Rating:</strong>
+            <%= details.rating %>
+        </p>
+
+        <% if (details.reviews && details.reviews.length> 0) { %>
+            <h3>Reviews:</h3>
+            <ul>
+                <% details.reviews.forEach((review)=> { %>
+                    <li><strong>
+                            <%= review.author_name %>
+                        </strong>: <%= review.text %>
+                    </li>
+                    <% }); %>
+            </ul>
+            <% } else { %>
+                <p>No reviews available.</p>
+                <% } %>
+
+                    <a href="/medicals">Back to Results</a>
+    </div>
+</body>
+
+</html>

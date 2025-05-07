@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow-up Questions</title>
+    <link rel="stylesheet" href="/questions.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/logo1-removebg-preview.png" alt="Cetalink Logo"> <!-- Add your logo image path here -->
+                <h1>Cetalink</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h1>Answer the Following Questions</h1>
+
+        <form action="/<%=_id%>/final-diagnosis" method="POST">
+            <% questions.forEach((question, index)=> { %>
+                <div class="question-container">
+                    <label for="question<%= index %>">
+                        <%= question %>
+                    </label>
+                    <input type="text" id="question<%= index %>" name="answers[]" required><br>
+                </div>
+                <% }); %>
+
+                    <input type="hidden" name="primarySymptom" value="<%= primarySymptom %>">
+                    <input type="hidden" name="secondarySymptom" value="<%= secondarySymptom %>">
+                    <input type="hidden" name="questions" value="<%= questions %>">
+
+                    <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

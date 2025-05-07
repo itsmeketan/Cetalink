@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1f7f7;
+    color: #333;
+    margin: 0;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #2D90A5;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    /* Adjust logo size */
+    margin-right: 10px;
+    /* Space between logo and text */
+}
+
+.logo h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+    color: white;
+}
+
+/* Container Styles */
+.container {
+    margin-top: 80px;
+    /* Space for fixed header */
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hospital List Section */
+.hospital-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hospital-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.hospital-card:hover {
+    transform: translateY(-5px);
+}
+
+.hospital-name {
+    font-size: 1.5rem;
+    color: #2D90A5;
+    margin: 0;
+}
+
+.hospital-address {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.details-btn {
+    background-color: #2D90A5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-btn:hover {
+    background-color: #1a6073;
+    transform: translateY(-2px);
+}
+
+/* No Hospitals Message */
+.no-hospitals {
+    font-size: 1.2rem;
+    color: #ff4d4d;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Back Link */
+.back-link a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2D90A5;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #2D90A5;
+    border-radius: 5px;
+}
+
+.back-link a:hover {
+    background-color: #2D90A5;
+    color: white;
+    border-color: #1a6073;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.6rem;
+        padding: 10px;
+    }
+
+    .hospital-name {
+        font-size: 1.3rem;
+    }
+
+    .hospital-address {
+        font-size: 0.9rem;
+    }
+
+    .details-btn {
+        font-size: 0.9rem;
+    }
+
+    .back-link a {
+        font-size: 1rem;
+    }
+}

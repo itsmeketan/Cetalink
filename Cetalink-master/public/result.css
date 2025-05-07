@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1f7f7;
+    color: #333;
+    margin: 0;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #2D90A5;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.header-container {
+    max-width: 111100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px;
+    /* Adjust logo size */
+    margin-right: 10px;
+    /* Space between logo and text */
+}
+
+.logo h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Header Text */
+h1 {
+    background-color: #2D90A5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    padding: 2rem 2rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border-color: #2D90A5;
+    box-shadow: 0 0 5px rgba(45, 144, 165, 0.5);
+}
+
+form button {
+    background-color: #2D90A5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #1a6073;
+    transform: translateY(-2px);
+}
+
+form input[type="hidden"] {
+    display: none;
+}
+
+/* Button Styling for 'Use My Current Location' */
+button {
+    background-color: #2D90A5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #1a6073;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    form {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+
+    form input[type="text"] {
+        font-size: 1rem;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+#disease-list {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+}

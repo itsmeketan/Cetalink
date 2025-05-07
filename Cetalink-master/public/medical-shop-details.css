@@ -1,0 +1,121 @@
+/* Reset Styles */
+body, html, ul, li, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Soft background for readability */
+    margin-top: 70px; /* Offset for fixed header */
+}
+
+/* Header Styling */
+header {
+    background-color: #2D90A5; /* Healthcare theme color */
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+/* Header Flexbox Layout */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    max-width: 1201110px;
+    margin: 0 auto;
+}
+
+/* Logo and Title */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+    color: white;
+}
+
+/* Main Content Styling */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.container a {
+    text-decoration: none;
+    color: #2D90A5;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* Reviews Section */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+ul li strong {
+    color: #2D90A5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo img {
+        width: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetalink - One Stop Healthcare Solution</title>
+    <link rel="stylesheet" href="/symptom.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- Logo and Name -->
+            <div class="logo">
+                <img src="/logo1-removebg-preview.png" alt="Cetalink Logo">
+                <h1>Cetalink</h1>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="form-box">
+            <h1>Cetalink - One Stop Healthcare Solution</h1>
+            <h2>Enter Your Symptoms</h2>
+            <form action="/<%= _id %>/submit-symptoms" method="POST">
+                <div class="input-group">
+                    <label for="primarySymptom">Primary Symptoms:</label>
+                    <input type="text" id="primarySymptom" name="primarySymptom" required>
+                </div>
+                <div class="input-group">
+                    <label for="secondarySymptom">Secondary Symptoms:</label>
+                    <input type="text" id="secondarySymptom" name="secondarySymptom" required>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+
+            <div class="action-buttons">
+                <button onclick="location.href='/medicals'" class="btn">Show Medical</button>
+                <button onclick="location.href='/pathology'" class="btn">Show Pathology Centers</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

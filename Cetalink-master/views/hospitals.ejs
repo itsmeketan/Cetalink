@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Hospitals</title>
+    <link rel="stylesheet" href="/hospital.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/logo1-removebg-preview.png" alt="Cetalink Logo">
+                <h1>Cetalink</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Hospitals Near You</h1>
+
+        <% if (hospitals.length> 0) { %>
+            <section class="hospital-list">
+                <ul>
+                    <% hospitals.forEach(hospital=> { %>
+                        <li class="hospital-card">
+                            <h3 class="hospital-name">
+                                <%= hospital.name %>
+                            </h3>
+                            <p class="hospital-address">
+                                <%= hospital.address %>
+                            </p>
+                            <a href="/hospital/<%= hospital.place_id %>/details">
+                                <button class="details-btn">View Details</button>
+                            </a>
+                        </li>
+                        <% }); %>
+                </ul>
+            </section>
+            <% } else { %>
+                <p class="no-hospitals">No hospitals found in your area.</p>
+                <% } %>
+
+                    <div class="back-link">
+                        <a href="/">Go Back to Home</a>
+                    </div>
+    </div>
+</body>
+
+</html>

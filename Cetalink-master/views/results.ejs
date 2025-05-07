@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Results</title>
+    <link rel="stylesheet" href="/result.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/logo1-removebg-preview.png" alt="Cetalink Logo"> <!-- Change to actual logo path -->
+                <h1>Cetalink</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content --><br><br><Br><br><br>
+    <h1>Your Most Probable Disease</h1>
+    <div id="disease-list">
+        <%= diseases.slice(1, -1) %>
+    </div>
+    
+        <h2>Find Nearby Hospitals:</h2>
+        <form action="/<%=_id%>/hospitals" method="POST" id="location-form">
+            <label for="city">Enter your city:</label>
+            <input type="text" id="city" name="city" required>
+
+            <input type="hidden" id="latitude" name="latitude">
+            <input type="hidden" id="longitude" name="longitude">
+            <input type="hidden" id="diseases" name="diseases" value="<%=diseases%>">
+
+            <button type="submit">Find Hospitals</button>
+        </form>
+
+        <BR><BR><BR>
+
+        <button onclick="getLocation()">Use My Current Location</button>
+
+        <script>
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                } else {
+                    alert("Geolocation not supported.");
+                }
+            }
+
+            function showPosition(position) {
+                document.getElementById('latitude').value = position.coords.latitude;
+                document.getElementById('longitude').value = position.coords.longitude;
+                document.getElementById('location-form').submit();
+            }
+
+            function showError(error) {
+                alert("Error fetching location: " + error.message);
+            }
+        </script>
+</body>
+
+</html>

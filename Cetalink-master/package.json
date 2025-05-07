@@ -1,0 +1,21 @@
+{
+  "name": "cetalink",
+  "version": "1.0.0",
+  "description": "Cetalink : One Stop Health-care Solution.",
+  "main": "ceta.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeet S Mhatre",
+  "license": "ISC",
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.4.0",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.2",
+    "openai": "^4.72.0"
+  }
+}
